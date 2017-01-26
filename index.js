@@ -3,11 +3,11 @@ var jsdom = require('jsdom').jsdom;
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var d = jsdom('<body><div id="chart-container"></div></body>');
+var d = jsdom('<body><div id="container"></div></body>');
 var window = d.defaultView;
 
 var anychart = require('anychart')(window);
-var anychart_export = require('anychart-export')(anychart);
+var anychart_export = require('../anychart-node/lib/anychart-export.js')(anychart);
 var indexTemplate = fs.readFileSync('./template.html', 'utf-8');
 
 var app = express();
