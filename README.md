@@ -11,7 +11,7 @@ Then go to the example directory
 ```
 $ cd ./nodejs-export-server-application
 ```
-For runing example you have to install dependency. Just exec command below.
+For running example you have to install dependency. Just exec command below.
 ```
 $ npm install
 ```
