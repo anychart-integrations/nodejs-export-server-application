@@ -1,10 +1,10 @@
 {
-  "name": "nodejs-export-server-sample",
+  "name": "nodejs-export-server-application",
+  "title": "NodeJS export server application",
+  "description": "This example shows how to create export server with AnyChart and NodeJS.",
   "main": "./index.js",
   "version": "1.0.0",
-  "description": "This example shows how to create export server with AnyChart and NodeJS.",
-  "title": "NodeJS export server",
-  "homepage": "https://github.com/anychart-integrations/nodejs-export-server-sample",
+  "homepage": "https://github.com/anychart-integrations/nodejs-export-server-application",
   "license": "Apache-2.0",
   "keywords": [
     "charts",
@@ -14,13 +14,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/anychart-integrations/nodejs-export-server-sample"
+    "url": "https://github.com/anychart-integrations/nodejs-export-server-application"
   },
   "dependencies": {
     "jsdom": "^9.9.1",
     "express": "^4.14.0",
     "body-parser": "^1.16.0",
     "anychart": "7.13.0-dev-preview.0",
-    "anychart-export": "^1.0.0"
+    "anychart-nodejs": "^1.0.0"
   }
 }

@@ -7,7 +7,7 @@ var d = jsdom('<body><div id="container"></div></body>');
 var window = d.defaultView;
 
 var anychart = require('anychart')(window);
-var anychart_export = require('../anychart-node/lib/anychart-export.js')(anychart);
+var anychart_nodejs = require('anychart-nodejs')(anychart);
 var indexTemplate = fs.readFileSync('./template.html', 'utf-8');
 
 var app = express();
@@ -29,7 +29,7 @@ app.post('/export', function (req, res) {
     chart = null;
   }
   if (chart) {
-    anychart_export.exportTo(chart, 'png', function(err, data) {
+    anychart_nodejs.exportTo(chart, 'png', function(err, data) {
       var base64Data = data.toString('base64');
       var result = {data: base64Data};
       res.send(JSON.stringify(result));
