@@ -1,10 +1,21 @@
 [<img src="https://cdn.anychart.com/images/logo-transparent-segoe.png?2" width="234px" alt="AnyChart - Robust JavaScript/HTML5 Chart library for any project">](https://anychart.com)
-# NodeJS export server
+# NodeJS export server application
 This example shows how to create export server with AnyChart and NodeJS.
 
 ## Running
-To run export server you should just exec index.js file with nodejs.
-
+First of all you need to clone this repository
+```
+$ git clone git@github.com:anychart-integrations/nodejs-export-server-application.git
+```
+Then go to the example directory
+```
+$ cd ./nodejs-export-server-application
+```
+For runing example you have to install dependency. Just exec command below.
+```
+$ npm install
+```
+And to run export server you should just exec index.js file with nodejs.
 ```
 $ node index.js
 Export server listening on port 3000!
