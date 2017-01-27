@@ -54,6 +54,6 @@ chart.legend(true);
 chart.legend().position("bottom");
 
 // set container id for the chart
-chart.container('chart-container');
+chart.container('container');
 // initiate chart drawing
 chart.draw();
