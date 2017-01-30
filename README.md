@@ -32,7 +32,7 @@ Export server listening on port 3000!
 * express (Web server)
 * body-parser (Node.js body parsing middleware)
 * anychart (AnyChart library)
-* anychart-export (AnyChart nodejs export module)
+* anychart-nodejs (AnyChart nodejs export module)
 
 ## Further Learning
 * [Documentation](https://docs.anychart.com)
