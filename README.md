@@ -15,11 +15,16 @@ To run this example you have to install dependencies. Run this command:
 ```
 $ npm install
 ```
+> **Notice!**
+> AnyChart NodeJS module requires ImageMagic to create JPG and PNG images. Visit Image Magic install page for details. Note for Windows users: you have to create environment variable as described in Image Magic: Advanced Windows Installation article.
+
 And to run the export server you should just execute index.js file with nodejs:
 ```
 $ node index.js
 Export server listening on port 3000!
 ```
+> **Notice!**
+> Please refrain from using percent values in chart. In node js DOM emulation there is some problems with this and resulting image may be differ from the planned.
 
 ## Rules
 ```
