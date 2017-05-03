@@ -1,6 +1,6 @@
 [<img src="https://cdn.anychart.com/images/logo-transparent-segoe.png?2" width="234px" alt="AnyChart - Robust JavaScript/HTML5 Chart library for any project">](https://anychart.com)
-# NodeJS export server application
-This example shows how to create an export server with AnyChart and NodeJS.
+# Node.js charts exporting application
+This example shows how to build server-side charts exporting application using AnyChart charting library and Node.js module. In this expample we will show how to generate SVG, PNG, Jpeg Images.
 
 ## Running
 Clone this repository:
