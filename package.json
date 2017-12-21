@@ -3,7 +3,7 @@
   "title": "NodeJS export server application",
   "description": "This example shows how to create export server with AnyChart and NodeJS.",
   "main": "./index.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/anychart-integrations/nodejs-export-server-application",
   "license": "Apache-2.0",
   "keywords": [
