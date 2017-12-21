@@ -1,13 +1,16 @@
+#!/usr/bin/env node
+
 var fs = require('fs');
 var jsdom = require('jsdom').jsdom;
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var d = jsdom('<body><div id="container"></div></body>');
-var window = d.defaultView;
+var document = jsdom('<body><div id="container"></div></body>');
+var window = document.defaultView;
 
 var anychart = require('anychart')(window);
 var anychart_nodejs = require('anychart-nodejs')(anychart);
+
 var indexTemplate = fs.readFileSync('./template.html', 'utf-8');
 
 var app = express();
@@ -21,22 +24,18 @@ app.get('/', function (req, res) {
 });
 
 app.post('/export', function (req, res) {
-  var chart;
-  try {
-    chart = eval(req.body.code);
-  } catch (e) {
-    console.log(e.message);
-    chart = null;
-  }
-  if (chart) {
-    anychart_nodejs.exportTo(chart, 'png', function(err, data) {
-      var base64Data = data.toString('base64');
-      var result = {data: base64Data};
-      res.send(JSON.stringify(result));
-    });
-  } else {
-    res.send('');
-  }
+  //export parameters
+  var params = {
+    type: 'png',
+    dataType: 'javascript',
+    document: document
+  };
+
+  anychart_nodejs.exportTo(req.body.code, params, function(err, data) {
+    var base64Data = data.toString('base64');
+    var result = {data: base64Data};
+    res.send(JSON.stringify(result));
+  });
 });
 
 app.listen(3000, function () {
